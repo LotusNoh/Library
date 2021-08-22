@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lotus' Library</title>
+  <meta charset="utf-8">
+  <style>
+    #night_day {
+      padding:5px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+    #main {
+      margin-right: 20px;
+      margin-left:20px;
+      padding-left: 20px;
+      padding-top: 70px;
+    }
+    #main a{
+      font-weight: bold;
+    }
+    .book {
+      display:grid;
+      grid-template-columns: 230px 1fr;
+    }
+    .book div {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    body {
+      margin: 0px;
+    }
+    a {
+      color:black;
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    h2 {
+      margin:20px;
+    }
+    ol {
+      width:150px;
+      margin:20px;
+      padding:20px;
+    }
+    /*메뉴바 추가*/
+    nav{
+      font-size: 12pt;
+      font-family: 'PT Sans', Arial, Sans-serif;
+      position: relative;
+    }
+    nav ul{
+      padding: 0;
+      margin: 0 auto;
+      width: auto;
+    }
+    nav li{
+    }
+    nav a{
+      line-height: 50px;
+      height: 50px;
+    }
+    nav li a{
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    nav li:last-child a{
+      border-right: 0;
+        }
+    nav a:hover, nav a:active{
+    }
+    nav a#pull{
+      display: none;
+    }
+      html {
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+      }
+
+      ul{
+        /*list-style-type: none;*/
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        text-align: center;
+      }
+      li{
+        /*position: relative;*/
+        display: inline-block;
+      }
+      li a{
+        color: #FFFFFF;
+        text-align: center;
+        padding: 14.5px 16px;
+        text-decoration: none;
+      }
+      li a:hover{
+        /*color: #597812;*/
+        color: #FFD400;
+        font-weight:normal;
+      }
+      .menu {
+       width: 5000px;
+       height: 50px;
+       text-align: center;
+       max-width: 100%;
+       background-position: center;
+       background-size: cover;
+       background-color: #333333;color: white;
+       position: absolute;z-index: 1;
+     }
+  </style>
+<script>
+function nightDayHandler(self){
+  var target = document.querySelector('body');
+  if(self.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    self.value = 'day';
+    } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    self.value = 'night';
+    }
+  }
+</script>
+</head>
+<body>
+<input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+
+  <h1><a href="" target="_blank">Lotus' Library</a></h1>
+
+  <div class="menu" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+    <nav class="clearfix">
+      <ul class="clearfix">
+        <li><a href="0_home.html">Home</a></li>
+        <li><a href="1_about.html">About</a></li>
+        <li><a href="2_best.html" style="color:#15B175;">Best</a></li>
+        <li><a href="3_2021-7.html">2021 7月</a></li>
+        <li><a href="4_2021-8.html">2021 8月</a></li>
+        <li><a><insert onclick="alert('페이지 준비 중입니다.')">2021 9月</a></li>
+    </ul>
+    <a id="pull" href="#"></a>
+  </nav>
+  </div>
+
+      <div id="main">
+        <h2>Best</h2><br>
+        <div class="book">
+          <div>
+            <img src="COCORO.jpg" width=185 border="1" align="left" hspace="10"><br>
+          </div>
+          <div>
+              <a href="" target="_blank"><마음></a><br><br>
+              저자: 나츠메 소세키<br>
+              역자: 송태욱<br>
+              출판: 현암사<br>
+              별점: ★★★★★<br>
+              한줄평: "책장을 넘길 때마다 계속 다음 내용이 궁금해진다. 글에서 전해지는 '선생님'의 감정이 너무 강렬해서 괴로웠다."<br>
+          </div><br><br>
+          </div>
+          
+          <div class="book">
+            <div><a href="">
+              <img src="Circe.jpg" width=185 border="1" align="left" hspace="10"></a><br>
+            </div>
+            <div>
+                <a href="3_2021-7_dorian.html"><키르케></a><br><br>
+                저자: 매들린 밀러<br>
+                역자: 이은선<br>
+                출판: 이봄<br>
+                별점: ★★★★★<br>
+                한줄평: "덕분에 '현대적 재해석'에 관한 인식이 바뀌었다."<br>
+            </div><br><br>
+          </div>
+
+          <div class="book">
+            <div>
+              <img src="Snowman.jpg" width=185 border="1" align="left" hspace="10"><br>
+            </div>
+            <div>
+                <a href="" target="_blank"><눈사람 자살 사건></a><br><br>
+                저자: 최승호<br>
+                출판: 달아실<br>
+                별점: ★★★★★<br>
+                한줄평: "제목 바꿔서 다시 출판한 게 신의 한 수"<br>
+            </div><br><br>
+            </div>
+      </div>
+</body>
+</html>

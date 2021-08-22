@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lotus' Library</title>
+  <meta charset="utf-8">
+  <style>
+    #night_day {
+      padding:5px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+    #main {
+      margin-right: 20px;
+      margin-left:20px;
+      padding-left: 20px;
+      padding-top: 70px;
+    }
+    #main a{
+      font-weight: bold;
+    }
+    #intro {
+      padding-left: 20px;
+      padding-top: 10px;
+    }
+    #info {
+      display:grid;
+      grid-template-columns: 230px 1fr;
+      margin-top: 20px;
+    }
+    #info div {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .me {
+      padding-top: 45px;
+      margin-left: 5px;
+    }
+    body {
+      margin: 0px;
+    }
+      a {
+        color:black;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 40px;
+        text-align: center;
+      }
+      h2 {
+        margin:20px;
+      }
+      ol {
+        width:150px;
+        margin:20px;
+        padding:20px;
+      }
+      /*메뉴바 추가*/
+      nav{
+        font-size: 12pt;
+        font-family: 'PT Sans', Arial, Sans-serif;
+        position: relative;
+      }
+      nav ul{
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+      }
+      nav li{
+      }
+      nav a{
+        line-height: 50px;
+        height: 50px;
+      }
+      nav li a{
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+      nav li:last-child a{
+        border-right: 0;
+          }
+      nav a:hover, nav a:active{
+      }
+      nav a#pull{
+        display: none;
+      }
+        html {
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+        }
+
+        ul{
+          /*list-style-type: none;*/
+          margin: 0;
+          padding: 0;
+          background-color: #333;
+          text-align: center;
+        }
+        li{
+          /*position: relative;*/
+          display: inline-block;
+        }
+        li a{
+          color: #FFFFFF;
+          text-align: center;
+          padding: 14.5px 16px;
+          text-decoration: none;
+        }
+        li a:hover{
+          /*color: #597812;*/
+          color: #FFD400;
+          font-weight:normal;
+        }
+        .menu {
+         width: 5000px;
+         height: 50px;
+         text-align: center;
+         max-width: 100%;
+         background-position: center;
+         background-size: cover;
+         background-color: #333333;color: white;
+         position: absolute;z-index: 1;
+       }
+  </style>
+<script>
+function nightDayHandler(self){
+  var target = document.querySelector('body');
+  if(self.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    self.value = 'day';
+    } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    self.value = 'night';
+    }
+  }
+</script>
+</head>
+<body>
+<input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+
+  <h1><a href="" target="_blank" >Lotus' Library</a></h1>
+
+  <div class="menu" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+    <nav class="clearfix">
+      <ul class="clearfix">
+        <li><a href="0_home.html">Home</a></li>
+        <li><a href="1_about.html" style="color:#15B175;">About</a></li>
+        <li><a href="2_best.html">Best</a></li>
+        <li><a href="3_2021-7.html">2021 7月</a></li>
+        <li><a href="4_2021-8.html">2021 8月</a></li>
+        <li><a><insert onclick="alert('페이지 준비 중입니다.')">2021 9月</a></li>
+    </ul>
+    <a id="pull" href="#"></a>
+  </nav>
+  </div>
+
+
+      <div id="main">
+        <div>
+        <h2>Greeting</h2>
+          <div id="intro">
+            환영합니다.<br><br>
+            물리적인 책꽂이에 더이상 자리가 없어서 만들었습니다.<br><br>
+            언젠가 집에 서재를 장만하는 게 꿈입니다.<br><br>
+            원래 도서관을 세우는 게 꿈이었는데 조금 축소했습니다.<br><br>
+            읽은 책을 기록하고, 읽으며 든 생각을 두서 없이 기록합니다.<br><br>
+            목록에서 책 제목 또는 사진을 클릭하면 자세한 감상을 읽을 수 있습니다.<br><br>
+            좋은 하루 보내세요~<br><br>
+          </div>
+          <div id="info">
+            <div>
+              <img src="Info.jpg" width=185 border="1" align="left" hspace="10"><br>
+            </div>
+            <div class="me">
+                Hayoung Noh<br><br>
+                Korea Univ. Linguistics 20<br>
+                Linguistics & Psychology<br>
+                lotusf99@korea.ac.kr<br>
+            </div><br><br>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
